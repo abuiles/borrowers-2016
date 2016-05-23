@@ -28,7 +28,7 @@ export default Ember.Component.extend({
           // the component: action=(action "save")
           //
           return this.save(friend);
-        }, (err) => {
+        }, () => {
           //
           // This gets called if the HTTP request fails.
           //

@@ -1,10 +1,6 @@
-<h1>Friends Index</h1>
-
-<h2>Friends: {{model.length}}</h2>
-
-<table>
-  <thead>
-    <tr>
+<table class="mt3 fit">
+  <thead class="p1">
+    <tr class="white bg-blue">
       <th>Name</th>
       <th></th>
     </tr>
@@ -12,8 +8,12 @@
   <tbody>
     {{#each model as |friend|}}
       <tr>
-        <td>{{link-to friend.fullName "friends.show" friend}}</td>
-        <td><a href="#" {{action "delete" friend}}>Delete</a></td>
+        <td class="border-bottom">
+          {{link-to friend.fullName "friends.show" friend}}
+        </td>
+        <td class="border-bottom">
+          <a href="#" {{action "delete" friend}}>Delete</a>
+        </td>
       </tr>
     {{/each}}
   </tbody>

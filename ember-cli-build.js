@@ -22,16 +22,19 @@ module.exports = function(defaults) {
 
   app.import('vendor/fontello/fontello.css');
   app.import('vendor/fontello/font/fontello.ttf', {
-    destDir: 'font'
+    destDir: 'assets/font'
   });
   app.import('vendor/fontello/font/fontello.eot', {
-    destDir: 'font'
+    destDir: 'assets/font'
   });
   app.import('vendor/fontello/font/fontello.svg', {
-    destDir: 'font'
+    destDir: 'assets/font'
   });
   app.import('vendor/fontello/font/fontello.woff', {
-    destDir: 'font'
+    destDir: 'assets/font'
+  });
+  app.import('vendor/fontello/font/fontello.woff2', {
+    destDir: 'assets/font'
   });
 
   app.import('vendor/basscss.min.css');

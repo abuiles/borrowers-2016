@@ -1,30 +1,11 @@
-<div>
-  <h2>Friend details</h2>
-  <p>{{model.firstName}}</p>
-  <p>{{model.lastName}}</p>
-</div>
-<form {{action "save" on="submit"}}>
-  <h2>{{errorMessage}}</h2>
-  <p>
-    <label>First Name:
-      {{input value=model.firstName}}
-    </label>
-  </p>
-  <p>
-    <label>Last Name:
-      {{input value=model.lastName }}
-    </label>
-  </p>
-  <p>
-    <label>Email:
-      {{input value=model.email}}
-    </label>
-  </p>
-  <p>
-    <label>Twitter:
-      {{input value=model.twitter}}
-    </label>
-  </p>
-  <input type="submit" value="Save"/>
-  <button {{action "cancel"}}>Cancel</button>
+<form {{action "save" on="submit"}} class="col-8 px2 mx-auto friend-form">
+  {{#if errorMessage}}
+    <h2 class="white bg-red p1">{{errorMessage}}</h2>
+  {{/if}}
+  {{input value=model.firstName placeholder="First Name" class="input fit"}}<br>
+  {{input value=model.lastName  placeholder="Last Name" class="input fit"}}<br>
+  {{input value=model.email     placeholder="Email" class="input fit"}}<br>
+  {{input value=model.twitter   placeholder="Twitter" class="input fit"}}<br>
+  <button {{action "cancel"}} class="btn h3 border white bg-gray p2 mr2 col-3">Cancel</button>
+  <input type="submit" value="Save" class="btn h3 white bg-green border p2 mr2 col-3">
 </form>

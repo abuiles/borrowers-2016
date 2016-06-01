@@ -1,0 +1,16 @@
+<form {{action "save" on="submit"}} class="">
+  {{#if errorMessage}}
+    <h2 class="white bg-red p1">{{errorMessage}}</h2>
+  {{/if}}
+  <label>Select an article</label>
+  <select class="select">
+    <option>Article 1</option>
+    <option>Article 2</option>
+    <option>Article 3</option>
+  </select>
+  <br>
+  {{textarea value=model.notes placeholder="Notes" class="textarea" cols="50" rows="10"}}
+  <br>
+  <button {{action "cancel"}} class="btn border white bg-gray">Cancel</button>
+  <input type="submit" value="Save" class="btn white bg-green border">
+</form>

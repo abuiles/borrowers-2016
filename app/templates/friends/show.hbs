@@ -1,0 +1,14 @@
+<div class="clearfix flex p3 h2">
+  <div class="">
+    <img src="http://www.fillmurray.com/200/200">
+    <p class="">{{model.fullName}}</p>
+    <p class="">{{model.email}}</p>
+    <p class="">{{model.twitter}}</p>
+    <p>{{link-to "Lend article" "loans.new"}}</p>
+    <p class="">{{link-to "Edit info" "friends.edit" model}}</p>
+    <p class=""><a href="#" {{action "delete" model}}>Delete</a></p>
+  </div>
+  <div class="flex-auto ml1 loans-container">
+    {{outlet}}
+  </div>
+</div>

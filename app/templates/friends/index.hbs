@@ -1,0 +1,20 @@
+<table class="mt3 fit">
+  <thead class="p1 h2">
+    <tr class="white bg-blue">
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody class="p1 h3">
+    {{#each model as |friend|}}
+      <tr>
+        <td class="border-bottom">
+          {{link-to friend.fullName "loans" friend}}
+        </td>
+        <td class="border-bottom">
+          <a href="#" {{action "delete" friend}}>Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

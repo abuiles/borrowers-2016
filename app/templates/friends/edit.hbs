@@ -1,0 +1,8 @@
+<div class="center">
+  <h1>Editing {{model.fullName}}</h1>
+  {{friends/edit-form
+    model=model
+    save=(action "save")
+    cancel=(action "cancel")
+  }}
+</div>

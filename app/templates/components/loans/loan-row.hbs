@@ -1,0 +1,11 @@
+<td>{{loan.article.name}}</td>
+<td>{{loan.notes}}</td>
+<td>{{loan.createdAt}}</td>
+<td>
+  {{input type="checkbox" checked=loan.returned click=(action save loan)}}
+</td>
+<td>
+  {{#if loan.isSaving}}
+    <p>Saving...</p>
+  {{/if}}
+</td>

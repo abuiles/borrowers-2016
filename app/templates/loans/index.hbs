@@ -4,19 +4,16 @@
       <th>Article</th>
       <th>Notes</th>
       <th>Borrowed since</th>
-      <th></th>
+      <th>Returned</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     {{#each model as |loan|}}
-      <tr>
-        <td>{{loan.article.name}}</td>
-        <td>{{loan.notes}}</td>
-        <td>{{loan.createdAt}}</td>
-        <td></td>
-        <td></td>
-      </tr>
+      {{loans/loan-row
+        loan=loan
+        save=(action save)
+      }}
     {{/each}}
   </tbody>
 </table>

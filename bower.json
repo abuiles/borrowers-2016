@@ -5,8 +5,7 @@
     "ember-cli-shims": "0.1.1",
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
-    "moment": "^2.13.0",
-    "borrowers-dates": "^0.0.1"
+    "moment": "^2.13.0"
   },
   "resolutions": {
     "ember": ">=1.4"

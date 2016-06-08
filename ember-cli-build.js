@@ -38,5 +38,6 @@ module.exports = function(defaults) {
   });
 
   app.import('vendor/basscss.min.css');
+
   return app.toTree();
 };

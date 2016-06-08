@@ -1,9 +1,13 @@
 import Ember from 'ember';
-import request from 'ic-ajax';
 
 export default Ember.Route.extend({
+  //
+  // Check the following for more information about services
+  // https://guides.emberjs.com/v2.5.0/applications/services/
+  //
+  ajax: Ember.inject.service(),
   model()  {
-    return request('/friends').then(function(data){
+    return this.get('ajax').request('/friends').then(function(data){
       return {
         friendsCount: data.data.length
       };

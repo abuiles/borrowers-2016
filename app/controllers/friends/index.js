@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  queryParams: ['sortBy', 'sortAscending'],
   sortAscending: true,
   //
   // We'll use sortBy to hold the name of the field we want to sort by.
   //
-  sortBy: 'firstName',
+  sortBy: '',
   //
   // The setSortBy function receives the name of the function and
   // toggle `sortAscending`. The function `toggleProperty`  comes from the

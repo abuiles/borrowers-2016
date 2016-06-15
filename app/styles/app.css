@@ -6,3 +6,7 @@
     padding: 30px;
     margin-bottom: 20px;
 }
+
+[data-ember-action] {
+  cursor: pointer;
+}

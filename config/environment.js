@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    host: 'http://api.ember-101.com',
+    host: 'https://api.ember-101.com',
     modulePrefix: 'borrowers',
     environment: environment,
     baseURL: '/',

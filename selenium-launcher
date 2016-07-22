@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+try {
+  var webdriver = require('selenium-webdriver')
+  var net = require('net');
+  var myip = require('quick-local-ip');
+
+  var pageUrl = process.argv[2];
+
+  var seleniumPort = process.env['SELENIUM_PORT'];
+
+  console.log('selenium port: ', seleniumPort);
+
+  var hubUrl = 'http://localhost:' + seleniumPort + '/wd/hub/';
+  var browserName = 'chrome';
+
+  function buildDriver(hubUrl, browserName) {
+    return new webdriver.Builder().
+      withCapabilities({browserName: browserName}).
+      usingServer(hubUrl).
+      build();
+  }
+
+  var driver = buildDriver(hubUrl, browserName);
+
+  driver.session_.then(function() {
+    var address = myip.getLocalIP4();
+    var newPageUrl = pageUrl.replace('localhost', address)
+    driver.get(newPageUrl);
+  });
+
+  driver.sleep('2000000');
+
+} catch (e) {
+  console.log('--------------------');
+  console.log('-------Error--------');
+  console.log(e.stack);
+  console.log('--------------------');
+  console.log('\n\n\n\n\n\n\n\n\n\n');
+}

@@ -8,7 +8,16 @@ module.exports = {
     "PhantomJS"
   ],
   "launch_in_dev": [
-    "PhantomJS",
-    "Chrome"
-  ]
+
+  ],
+  "launchers": {
+    "Selenium": {
+      "exe": "./selenium-launcher",
+      "args": [],
+      "protocol": "browser"
+
+    }
+  },
+  "browser_disconnect_timeout": 60,
+  "browser_start_timeout": 60
 };

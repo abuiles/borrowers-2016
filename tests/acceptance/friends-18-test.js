@@ -14,7 +14,7 @@ moduleForAcceptance('Acceptance | friends', {
   }
 });
 
-test('0.662150368641598 /friends', function(assert) {
+test('0.895461636344542 /friends', function(assert) {
   visit('/friends');
 
   andThen(function() {
@@ -30,7 +30,7 @@ test('0.662150368641598 /friends', function(assert) {
   });
 });
 
-test('0.904016031071126 /friends 2', function(assert) {
+test('0.787233119990763 /friends 2', function(assert) {
   visit('/friends');
 
   andThen(function() {

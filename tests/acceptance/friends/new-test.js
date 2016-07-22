@@ -3,7 +3,7 @@ import moduleForAcceptance from 'borrowers/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | friends/new');
 
-test('visiting /friends/new', function(assert) {
+test('0.338537357588397 /friends/new', function(assert) {
   visit('/friends/new');
 
   andThen(function() {
